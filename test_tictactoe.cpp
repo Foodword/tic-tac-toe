@@ -4,18 +4,33 @@
 
 // Students will implement these tests in the lab
 
+
 void test_initial_state() {
-    // TODO: Students implement this
-    std::cout << "✓ Initial state test passed\n";
+    TicTacToe tictactoe;
+    int blankcell;
+    for(int i = 0; i<3; i++){
+        for(int j = 0; j<3; j++){
+            if(tictactoe.getCell(i,j) == ' '){
+                blankcell++;
+            }
+        }
+    }
+    
+    if(tictactoe.getCurrentPlayer() == 'X' && tictactoe.getMoveCount() == 0 && blankcell == 9 && tictactoe.isGameOver() == false){
+    std::cout << "✓ Initial state test passed\n";}
 }
 
 void test_valid_move() {
-    // TODO: Students implement this
-    std::cout << "✓ Valid move test passed\n";
+    TicTacToe tictactoe;
+    originalcount = tictactoe.getMoveCount();
+    tictactoe.makeMove(0,0);
+    if(tictactoe.getCell(0,0) == 'X'&& tictactoe.getCurrentPlayer() == 'O' && tictactoe.getMoveCount() == originalcount+1){
+    std::cout << "✓ Valid move test passed\n";}
 }
 
 void test_invalid_moves() {
-    // TODO: Students implement this
+    TicTacToe tictactoe;
+    if(tictactoe.makeMove(0,0) == false && tictactoe.makeMove(1,4) == false && (tictactoe.isGameOver() == true && tictactoe.makeMove(3,3) == false)
     std::cout << "✓ Invalid moves test passed\n";
 }
 
