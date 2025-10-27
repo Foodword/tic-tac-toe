@@ -1,5 +1,6 @@
 #include "TicTacToe.h"
 #include <sstream>
+#include <vector>
 
 TicTacToe::TicTacToe() : currentPlayer('X'), moveCount(0) {
     for (int i = 0; i < 3; i++) {
