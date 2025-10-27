@@ -87,8 +87,8 @@ bool TicTacToe::makeMove(int row, int col) {
     moveCount++;
 
     // AI feature: track move history
-
-    moveHistory.push_back({row, col, currentPlayer});
+    
+   // moveHistory.push_back({row, col, currentPlayer});
 
     currentPlayer = (currentPlayer == 'X') ? 'O' : 'X';
 
