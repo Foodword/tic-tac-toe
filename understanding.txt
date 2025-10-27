@@ -1,1 +1,5 @@
-
+1. it returns blank
+2. also returns blank
+3. due to how they would be used getWinner needs to be far more protected in what it returns compared to makeMove especially since much of makeMove functions like a void type method
+4. true
+5. X
