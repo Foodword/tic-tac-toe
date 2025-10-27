@@ -35,23 +35,52 @@ void test_invalid_moves() {
 }
 
 void test_winner_detection_row() {
-    // TODO: Students implement this
-    std::cout << "✓ Winner detection (row) test passed\n";
+    TicTacToe tictactoe;
+    tictactoe.makeMove(0,0);
+    tictactoe.makeMove(1,0);
+    tictactoe.makeMove(0,1);
+    tictactoe.makeMove(1,1);
+    tictactoe.makeMove(0,2);
+    if(tictactoe.getWinner() =='X' && tictactoe.isGameOver == true){
+    std::cout << "✓ Winner detection (row) test passed\n";}
 }
 
 void test_winner_detection_column() {
-    // TODO: Students implement this
-    std::cout << "✓ Winner detection (column) test passed\n";
+    TicTacToe tictactoe;
+    tictactoe.makeMove(1,1);
+    tictactoe.makeMove(0,0);
+    tictactoe.makeMove(1,0);
+    tictactoe.makeMove(0,1);
+    tictactoe.makeMove(2,2);
+    tictactoe.makeMove(0,2);
+    if(tictactoe.getWinner() == 'O' ' && tictactoe.isGameOver == true){
+    std::cout << "✓ Winner detection (column) test passed\n";}
 }
 
 void test_winner_detection_diagonal() {
-    // TODO: Students implement this
-    std::cout << "✓ Winner detection (diagonal) test passed\n";
+    TicTacToe tictactoe;
+    tictactoe.makeMove(0,0);
+    tictactoe.makeMove(0,2);
+    tictactoe.makeMove(1,1);
+    tictactoe.makeMove(0,1);
+    tictactoe.makeMove(2,2);
+    if(tictactoe.getWinner() == 'X' && tictactoe.isGameOver == true){
+    std::cout << "✓ Winner detection (diagonal) test passed\n";}
 }
 
 void test_full_board_no_winner() {
-    // TODO: Students implement this
-    std::cout << "✓ Full board no winner test passed\n";
+    TicTacToe tictactoe;
+    tictactoe.makeMove(0,0);
+    tictactoe.makeMove(0,1)
+    tictactoe.makeMove(0,2);
+    tictactoe.makeMove(1,1);
+    tictactoe.makeMove(1,0);
+    tictactoe.makeMove(1,2);
+    tictactoe.makeMove(2,0);
+    tictactoe.makeMove(2,1);
+    tictactoe.makeMove(2,2);
+    if(tictactoe.getWinner() == ' ' && tictactoe.isGameOver == true && tictactoe.isFull == true){
+    std::cout << "✓ Full board no winner test passed\n";}
 }
 
 int main() {
